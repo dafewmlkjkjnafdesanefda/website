@@ -4,11 +4,16 @@ interface ProjectCardProps {
   tags: string[]
   gradient: string
   link?: string
+  onClick?: () => void
 }
 
-export default function ProjectCard({ title, description, tags, gradient, link = '#' }: ProjectCardProps) {
+export default function ProjectCard({ title, description, tags, gradient, onClick }: ProjectCardProps) {
   return (
-    <div className="group relative overflow-hidden rounded-2xl shadow-warm-md cursor-pointer">
+    <div
+      className="group relative overflow-hidden rounded-2xl shadow-warm-md cursor-pointer"
+      onClick={onClick}
+      data-cursor="pointer"
+    >
       {/* Image / Color placeholder */}
       <div className={`aspect-[4/3] w-full ${gradient}`} />
 
@@ -26,12 +31,9 @@ export default function ProjectCard({ title, description, tags, gradient, link =
             </span>
           ))}
         </div>
-        <a
-          href={link}
-          className="inline-flex items-center text-sm text-white font-medium hover:text-gold transition-colors duration-200"
-        >
+        <span className="inline-flex items-center text-sm text-white font-medium hover:text-gold transition-colors duration-200">
           View Project →
-        </a>
+        </span>
       </div>
 
       {/* Default title bar */}
