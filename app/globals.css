@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-stone-50 text-ink font-sans antialiased;
+}
+
+h1, h2, h3 {
+  @apply font-serif;
+}
+
+@layer utilities {
+  .section-padding {
+    @apply px-6 py-24 md:px-12 lg:px-24;
+  }
+  .section-title {
+    @apply text-4xl md:text-5xl font-serif font-semibold text-stone-900 mb-4;
+  }
+  .gold-underline {
+    @apply relative inline-block;
+  }
+  .gold-underline::after {
+    content: '';
+    @apply absolute left-0 -bottom-1 w-full h-0.5 bg-gold;
+  }
+}
