@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Env
+.env
+.env.local
+.env*.local
+
+# TypeScript
+next-env.d.ts
+
+# Misc
+.DS_Store
+*.pyc
+__pycache__/
