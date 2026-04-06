@@ -8,8 +8,9 @@ import ThemeToggle from '@/components/ui/ThemeToggle'
 const links = [
   { label: 'About',    href: '#about',    id: 'about'    },
   { label: 'Work',     href: '#work',     id: 'work'     },
-  { label: 'Services', href: '#services', id: 'services' },
-  { label: 'Contact',  href: '#contact',  id: 'contact'  },
+  { label: 'Services',   href: '#services',   id: 'services'   },
+  { label: 'Playground', href: '#playground', id: 'playground' },
+  { label: 'Contact',    href: '#contact',    id: 'contact'    },
 ]
 
 export default function NavBar() {
@@ -26,7 +27,7 @@ export default function NavBar() {
 
   // Active section via IntersectionObserver
   useEffect(() => {
-    const sectionIds = ['hero', 'about', 'work', 'services', 'contact']
+    const sectionIds = ['hero', 'about', 'work', 'services', 'playground', 'contact']
     const observers: IntersectionObserver[] = []
 
     sectionIds.forEach((id) => {
@@ -65,7 +66,7 @@ export default function NavBar() {
             className="font-serif text-xl font-semibold text-stone-900 dark:text-white tracking-tight hover:text-gold transition-colors duration-200 cursor-pointer"
             onClick={() => setMenuOpen(false)}
           >
-            AM
+            D<span className="text-gold">4</span>VO
           </a>
 
           {/* Desktop links */}

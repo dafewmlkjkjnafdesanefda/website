@@ -3,11 +3,11 @@ import './globals.css'
 import Providers from './providers'
 
 export const metadata: Metadata = {
-  title: 'Alex Morgan — Designer & Developer',
-  description: 'Personal portfolio of Alex Morgan — crafting elegant digital experiences with thoughtful design and clean code.',
+  title: 'D4VO — Digital Alchemist',
+  description: 'Portfolio of D4VO — transmuting ideas into immersive digital experiences.',
   openGraph: {
-    title: 'Alex Morgan — Designer & Developer',
-    description: 'Personal portfolio — elegant digital experiences.',
+    title: 'D4VO — Digital Alchemist',
+    description: 'D4VO — transmuting ideas into immersive digital experiences.',
     type: 'website',
   },
 }

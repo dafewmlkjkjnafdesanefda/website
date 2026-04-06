@@ -1,6 +1,7 @@
 'use client'
 
 import FadeInSection from '@/components/ui/FadeInSection'
+import MorphBlob from '@/components/ui/MorphBlob'
 import SkillBar from '@/components/ui/SkillBar'
 import TiltCard from '@/components/ui/TiltCard'
 import StatCounter from '@/components/ui/StatCounter'
@@ -18,14 +19,15 @@ const skills = [
 
 export default function About() {
   return (
-    <section id="about" className="section-padding max-w-6xl mx-auto dark:bg-stone-900">
+    <section id="about" className="section-padding max-w-6xl mx-auto dark:bg-stone-900 relative overflow-hidden">
+      <MorphBlob className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] -z-10 opacity-60" />
       <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* 3D Tilt photo */}
         <FadeInSection>
           <TiltCard className="max-w-sm mx-auto md:mx-0">
             <div className="relative aspect-square w-full">
               <div className="w-full h-full rounded-3xl bg-gradient-to-br from-stone-200 via-stone-100 to-amber-50 dark:from-stone-700 dark:via-stone-800 dark:to-stone-700 shadow-warm-lg flex items-center justify-center">
-                <span className="font-serif text-7xl font-semibold text-stone-300 dark:text-stone-500 select-none">AM</span>
+                <span className="font-serif text-6xl font-semibold text-stone-300 dark:text-stone-500 select-none">D4VO</span>
               </div>
               {/* Gold accent corner */}
               <div
@@ -43,13 +45,13 @@ export default function About() {
             <span className="gold-underline">Passionate</span> about craft
           </h2>
           <p className="font-sans text-stone-500 dark:text-stone-400 leading-relaxed mb-4">
-            I&apos;m a designer and developer with over 8 years of experience building digital products
-            that balance aesthetic beauty with functional clarity. I believe great design is invisible —
-            it simply works, and works beautifully.
+            I&apos;m D4VO — a digital alchemist who transmutes code into immersive experiences.
+            I blur the line between art and engineering, building interfaces that feel impossible
+            and interactions that feel alive.
           </p>
           <p className="font-sans text-stone-500 dark:text-stone-400 leading-relaxed mb-8">
-            My work spans brand identity, interactive interfaces, and full-stack applications. I thrive
-            at the intersection of design and engineering, where pixel precision meets performant code.
+            From optical illusions to 3D environments, from generative art to motion-driven UI —
+            I obsess over every pixel, every frame, every interaction until it feels like magic.
           </p>
 
           {/* Stats row */}

@@ -4,13 +4,13 @@ import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import MagneticButton from '@/components/ui/MagneticButton'
-import NoiseCanvas from '@/components/ui/NoiseCanvas'
+import WaveGrid from '@/components/ui/WaveGrid'
 
 const phrases = [
-  'crafting elegant digital experiences',
-  'building performant web apps',
-  'designing with purpose',
-  'turning ideas into interfaces',
+  'transmuting ideas into digital experiences',
+  'bending pixels to my will',
+  'crafting impossible interfaces',
+  'making the web feel alive',
 ]
 
 const container = {
@@ -80,8 +80,8 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center bg-stone-50 dark:bg-stone-900 px-6 text-center overflow-hidden"
     >
-      {/* Animated grain */}
-      <NoiseCanvas opacity={0.035} />
+      {/* 3D wireframe grid */}
+      <WaveGrid opacity={0.6} />
 
       {/* Warm radial glow */}
       <div
@@ -100,14 +100,14 @@ export default function Hero() {
         className="relative z-10 max-w-4xl"
       >
         <motion.p variants={item} className="font-sans text-sm tracking-[0.25em] uppercase text-gold mb-6">
-          Designer &amp; Developer
+          Digital Alchemist
         </motion.p>
 
         <motion.h1
           variants={item}
           className="font-serif text-6xl md:text-8xl font-semibold text-stone-900 dark:text-white leading-[1.05] mb-6"
         >
-          Alex Morgan
+          D4VO
         </motion.h1>
 
         {/* Typewriter tagline */}

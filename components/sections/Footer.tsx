@@ -3,7 +3,7 @@ export default function Footer() {
   return (
     <footer className="bg-stone-950 py-8 px-6 text-center">
       <p className="font-sans text-xs text-stone-600 tracking-wide">
-        © {year} Alex Morgan. Designed &amp; built with care.
+        © {year} D4VO. Crafted with obsession.
       </p>
     </footer>
   )

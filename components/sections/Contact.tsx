@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Github, Linkedin, Twitter, Check } from 'lucide-react'
 import FadeInSection from '@/components/ui/FadeInSection'
+import ParticleField from '@/components/ui/ParticleField'
 import { useToast } from '@/app/providers'
 
 const socials = [
@@ -54,7 +55,8 @@ export default function Contact() {
     }`
 
   return (
-    <section id="contact" className="section-padding bg-stone-900">
+    <section id="contact" className="section-padding bg-stone-900 relative overflow-hidden">
+      <ParticleField className="absolute inset-0" />
       <div className="max-w-2xl mx-auto text-center">
         <FadeInSection>
           <p className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-3">Get In Touch</p>
