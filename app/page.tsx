@@ -3,6 +3,7 @@ import Hero from '@/components/sections/Hero'
 import About from '@/components/sections/About'
 import Work from '@/components/sections/Work'
 import Services from '@/components/sections/Services'
+import Playground from '@/components/sections/Playground'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/sections/Footer'
 
@@ -14,6 +15,7 @@ export default function Home() {
       <About />
       <Work />
       <Services />
+      <Playground />
       <Contact />
       <Footer />
     </main>
