@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import FadeInSection from '@/components/ui/FadeInSection'
 import MorphBlob from '@/components/ui/MorphBlob'
 import SkillBar from '@/components/ui/SkillBar'
@@ -21,26 +22,57 @@ export default function About() {
   return (
     <section id="about" className="section-padding max-w-6xl mx-auto dark:bg-stone-900 relative overflow-hidden">
       <MorphBlob className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] -z-10 opacity-60" />
+
+      {/* Floating decorative elements */}
+      <motion.div
+        aria-hidden
+        className="absolute top-20 right-10 w-20 h-20 rounded-full border border-gold/10"
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 20, ease: 'linear' }}
+      />
+      <motion.div
+        aria-hidden
+        className="absolute bottom-20 left-10 w-14 h-14 rounded-full border border-gold/10"
+        animate={{ rotate: -360 }}
+        transition={{ repeat: Infinity, duration: 15, ease: 'linear' }}
+      />
+
       <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* 3D Tilt photo */}
-        <FadeInSection>
+        <FadeInSection direction="left">
           <TiltCard className="max-w-sm mx-auto md:mx-0">
             <div className="relative aspect-square w-full">
-              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-stone-200 via-stone-100 to-amber-50 dark:from-stone-700 dark:via-stone-800 dark:to-stone-700 shadow-warm-lg flex items-center justify-center">
-                <span className="font-serif text-6xl font-semibold text-stone-300 dark:text-stone-500 select-none">D4VO</span>
+              <div className="w-full h-full rounded-3xl bg-gradient-to-br from-stone-200 via-stone-100 to-amber-50 dark:from-stone-700 dark:via-stone-800 dark:to-stone-700 shadow-warm-lg flex items-center justify-center overflow-hidden">
+                <motion.span
+                  className="font-serif text-6xl font-semibold text-stone-300 dark:text-stone-500 select-none"
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+                >
+                  D4VO
+                </motion.span>
               </div>
-              {/* Gold accent corner */}
-              <div
+              {/* Gold accent corner — animated */}
+              <motion.div
                 aria-hidden
                 className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl border-2 border-gold/30 -z-10"
+                animate={{ rotate: [0, 3, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 6, ease: 'easeInOut' }}
               />
             </div>
           </TiltCard>
         </FadeInSection>
 
         {/* Bio */}
-        <FadeInSection delay={0.1}>
-          <p className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-3">About Me</p>
+        <FadeInSection delay={0.1} direction="right">
+          <motion.p
+            className="font-sans text-xs tracking-[0.2em] uppercase text-gold mb-3"
+            initial={{ opacity: 0, letterSpacing: '0.5em' }}
+            whileInView={{ opacity: 1, letterSpacing: '0.2em' }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            About Me
+          </motion.p>
           <h2 className="section-title mb-6">
             <span className="gold-underline">Passionate</span> about craft
           </h2>

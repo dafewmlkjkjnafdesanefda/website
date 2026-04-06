@@ -37,5 +37,38 @@ h1, h2, h3 {
   .gold-underline::after {
     content: '';
     @apply absolute left-0 -bottom-1 w-full h-0.5 bg-gold;
+    animation: shimmer-width 2s ease-in-out infinite;
   }
+}
+
+/* Shimmer width animation for gold underlines */
+@keyframes shimmer-width {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Smooth page section transitions */
+section {
+  transition: background-color 0.5s ease;
+}
+
+/* Enhanced scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(202, 138, 4, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(202, 138, 4, 0.5);
+}
+
+/* Selection color */
+::selection {
+  background: rgba(202, 138, 4, 0.3);
+  color: inherit;
 }
